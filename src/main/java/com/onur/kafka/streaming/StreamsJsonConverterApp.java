@@ -56,7 +56,7 @@ public class StreamsJsonConverterApp {
         Runtime.getRuntime().addShutdownHook(new Thread(streams::close));
     }
 
-    public static JsonNode prepareJson(JsonNode inputJson){
+    private static JsonNode prepareJson(JsonNode inputJson){
         try {
             ObjectNode node = (ObjectNode) new ObjectMapper().readTree(JsonOperations.makeJsonFlatten(inputJson.toString()));
             node.put("start_date", TimeOperations.changePSTtoUTC(node.get("start_date").asText()));
