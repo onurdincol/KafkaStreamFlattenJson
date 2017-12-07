@@ -74,7 +74,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.onur.kafka.streaming.StreamsStarterApp</mainClass>
+                            <mainClass>com.onur.kafka.streaming.StreamsJsonConverterApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
